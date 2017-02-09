@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import totalPermutations from '../src/totalPermutations'
 
-describe.only('totalPermutations', function(){
+describe('totalPermutations', function(){
 
   it('should be a function', function(){
     expect(totalPermutations).to.be.a('function')
