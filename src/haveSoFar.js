@@ -1,7 +1,6 @@
 var finalArr = []
 var emptyArray = []
 var secondEmptyArray = []
-
 //shuffle funx
 String.prototype.shuffle = function () {
   var a = this.split(""),
