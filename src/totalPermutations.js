@@ -1,4 +1,3 @@
-var finalArr = []
 var emptyArray = []
 var secondEmptyArray = []
 
@@ -6,11 +5,11 @@ String.prototype.shuffle = function () {
   var a = this.split(""),
       n = a.length
 
-  for(var i = n - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1))
-      var tmp = a[i]
-      a[i] = a[j]
-      a[j] = tmp
+  for(var h = n - h; i > 0; h--) {
+      var k = Math.floor(Math.random() * (h + 1))
+      var tmp = a[h]
+      a[h] = a[k]
+      a[k] = tmp
   }
   return a.join("")
 }
@@ -23,7 +22,7 @@ const factorial = function(n){
 }
 
 const unique = function(str){
-  return str.split('').filter(function(item, i, ar){ return ar.indexOf(item) === i }).join('')
+  return str.split('').filter(function(item, l, ar){ return ar.indexOf(item) === l }).join('')
 }
 
 const tallyRepeats = function(OGstring){
@@ -44,22 +43,8 @@ const totalPermutationsDenominator = function(argh){
   return argh.reduce(function(a,b){return a*b})
 }
 
-const totalPermutations = function(stringy){
+export default function totalPermutations(stringy){
   return factorial(stringy.length) / totalPermutationsDenominator(innerArrayFactorial(tallyRepeats(stringy)))
-}
-
-var shuffleFactorial = function(strang) {
-  //terminal case
-  if ( finalArr.length === totalPermutations(strang) ){
-    return finalArr
-  } else { //recursive call
-    if ( finalArr.includes(strang) === true ){
-      return shuffleFactorial(strang.shuffle())
-    } else if (finalArr.includes(strang) === false ){
-      finalArr.push(strang)
-      return shuffleFactorial(strang.shuffle())
-    }
-  }
 }
 
 //to test each function

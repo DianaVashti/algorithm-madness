@@ -1,13 +1,13 @@
 import { expect } from 'chai'
 import shuffleFactorial from '../src/shuffleFactorial'
 
-describe.only('shuffleFactorial', function(){
+describe('shuffleFactorial', function(){
 
   it('should be a function', function(){
     expect(shuffleFactorial).to.be.a('function')
   })
 
-  it.only('should do weird stuff', function(){
+  it('should do weird stuff', function(){
     expect(shuffleFactorial('dawg').length).to.deep.equal(24)
   })
 
